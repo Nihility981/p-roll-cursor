@@ -1,0 +1,28 @@
+# 探测输出：含明文 accessToken / 邮箱 / 用户 ID，绝不能提交
+probe-output/
+
+# 编译产物
+# 二进制名必须用 / 锚定在仓库根：不带斜杠的 "probe" 会匹配任意层级的同名
+# 目录，把源码目录 cmd/probe/ 一起吞掉。
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/cursor-switch
+/probe
+
+# 测试与覆盖率
+*.test
+*.out
+coverage.txt
+
+# Go 工作区
+go.work
+go.work.sum
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
